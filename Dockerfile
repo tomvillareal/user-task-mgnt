@@ -1,11 +1,11 @@
 # Use an official OpenJDK runtime as a parent image
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-slim
 
 # Set the working directory to /app
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY ./target/user-task-mngt-1.0.0.jar.jar /app/app.jar
+COPY ./target/user-task-mngt-1.0.0.jar /app/app.jar
 
 # Expose port 8080
 EXPOSE 8080
